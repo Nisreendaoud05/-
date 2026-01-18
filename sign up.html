@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="cssstyle.css">
+    <title>تسجيل الدخول </title>
+
+    <style>
+
+        footer {
+    background-color:#2f6f62;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+footer a{ 
+    text-decoration: none;
+    color: #dff5f0;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbarr " dir="rtl">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="startlearn.html">صوتي</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="startlearn.html">&nbsp;&nbsp;الصفحة الرئيسية&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.us.html"> &nbsp;&nbsp; من نحن&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="succes.stories.html"> &nbsp;&nbsp;قصص نجاح &nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact us.html">&nbsp;&nbsp; تواصل معنا &nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="event.html"> &nbsp;&nbsp;المزيد من الانشطة&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"> &nbsp;&nbsp; تسجيل دخول &nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sign up.html"> &nbsp;&nbsp; انشاء حساب&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true" href="Dailyprogress.html"> &nbsp;تابع تقدمك&nbsp;</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        <div class="login">        
+<form>
+    <h2 style="color: #2f6f62;font-size: 50px;font-weight: bold;">انشاء حساب</h2>
+    <label for="email" class="label"><strong>البريد الالكتروني </strong></label>
+    <input type="email"  name="email" class="input" placeholder="example@gmail.com" id="emai">
+           <br>
+    <label for="password" class="label" ><strong>كلمة المرور </strong></label>
+    <input type="password"  name="password"  class="input" placeholder="********" id="pass"><br>
+
+    <label for="text" class="label"><strong>الاسم</strong></label>
+    <input type="text"  name="first name" class="input" placeholder="الاسم الاول " id="first">
+           <br>
+    <label for="text" class="label"><strong>الاسم الاخير </strong></label>
+    <input type="text"  name="last name" class="input" placeholder="اسم العائلة " id="last">
+           <br>
+           <span style="color: red;" id="sp"></span><br>
+   
+
+<button type="submit" class="butt" onclick="return signUp()">انشاء حساب</button>
+    <p style="margin-top: 15px; font-size: 16px;">
+لديك حساب بالفعل !        <a href="login.html" style="color:#2f6f62; text-decoration:none; font-weight:bold;">تسجيل الدخول </a>
+    </p>
+</form>
+
+    </div>
+<footer>
+	 <p style="font-size: 20px; " >© صوتي   </p> 
+	 <a href="#"><Strong> سياسة الخصوصية</Strong></a> 
+	 | <a href="#"><strong>  شروط الاستخدام  </strong></a> | 
+	 <a href="contact us.html">        <Strong>اتصل بنا</Strong></a>
+	</footer>
+
+<script>
+
+       function signUp(){
+        var x = document.getElementById("emai").value;
+        var y = document.getElementById("pass").value;
+        var a = document.getElementById("first").value;
+        var b = document.getElementById("last").value;
+        if (x == "" || y == "" || a == "" || b == "" ){
+            document.getElementById("sp").innerHTML="<strong>Error</strong> "+"  Filed is empty  ";
+            return false;
+        }
+        else{
+             document.getElementById("sp").innerHTML=" ";
+             return true;
+        }
+       }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html> 
